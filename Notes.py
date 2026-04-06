@@ -35,31 +35,31 @@
 #
 #     heal_hero(5,'25')
 #     heal_hero(5, 'max')
-
+#
 # Square each level
-squares = [n** 2
-           for n in [1, 2, 3,4]]
-print(squares)
-
-names = ['John', 'Jane', 'Bob']
-upper = [n.upper() for n in names]
-print(upper)
-
-levels = [1, 5, 12, 20]
-xp     = [lvl * 100 for lvl in levels]
-print(xp)
-
-party = [
-    {"name": "Aria",  "level": 15},
-    {"name": "Brom",  "level": 7},
-    {"name": "Caela", "level": 22},
-    {"name": "Dex",   "level": 3},
-]
-
-veterans = [ h['names']for h in party
-             if h ['level'] >= 10]
-
-print(veterans)
+# squares = [n** 2
+#            for n in [1, 2, 3,4]]
+# print(squares)
+#
+# names = ['John', 'Jane', 'Bob']
+# upper = [n.upper() for n in names]
+# print(upper)
+#
+# levels = [1, 5, 12, 20]
+# xp     = [lvl * 100 for lvl in levels]
+# print(xp)
+#
+# party = [
+#     {"name": "Aria",  "level": 15},
+#     {"name": "Brom",  "level": 7},
+#     {"name": "Caela", "level": 22},
+#     {"name": "Dex",   "level": 3},
+# ]
+#
+# veterans = [ h['names']for h in party
+#              if h ['level'] >= 10]
+#
+# print(veterans)
 
 monsters = [
     {"name": "Goblin",   "hp": 30,  "gold": "5"},
@@ -81,7 +81,7 @@ tough_monsters_names = [m['names']
                         if m ['hp'] > 25]
 print(tough_monsters_names)
 
-gold_amounts = [safe_gold(m) for m in monsters]
+gold_amounts = [safe_gold(m) for m in monsters if m ['gold'] != 'twenty']
 
 print(gold_amounts)
 
